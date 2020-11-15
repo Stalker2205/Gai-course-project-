@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Gai
 {
@@ -16,20 +17,26 @@ namespace Gai
         {
             InitializeComponent();
         }
-
-        private void сотрудникиBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.сотрудникиBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.databasegaiDataSet);
-
-        }
-
+        int pattempt;
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "databasegaiDataSet.Сотрудники". При необходимости она может быть перемещена или удалена.
-            this.сотрудникиTableAdapter.Fill(this.databasegaiDataSet.Сотрудники);
+            try
+            {
+                pattempt = Convert.ToInt32(File.ReadAllText("Pattemp.txt"));
+            }
+            catch { MessageBox.Show("Верните файл"); Close(); }
 
+            this.сотрудникиTableAdapter.Fill(this.databasegaiDataSet.Сотрудники);
+            // string sq = File.ReadAllText("Time.txt");
+            if (File.Exists("Time.txt") == false && File.Exists("Pattemp.txt") == false)
+            {
+                Perem.keyz = 0;
+            }
+            else
+            {
+                Perem.keyz = 1;
+            }
+            label_pattempt.Text = "Количество попыток входа : " + pattempt;
         }
     }
 }
