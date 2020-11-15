@@ -93,6 +93,7 @@
             this.Btn_Login.TabIndex = 12;
             this.Btn_Login.Text = "Вход";
             this.Btn_Login.UseVisualStyleBackColor = true;
+            this.Btn_Login.Click += new System.EventHandler(this.Btn_Login_Click);
             // 
             // label1
             // 

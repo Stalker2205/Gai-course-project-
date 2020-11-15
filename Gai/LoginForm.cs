@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using MainClass;
 
 namespace Gai
 {
@@ -20,6 +21,7 @@ namespace Gai
         int pattempt;
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            Perem per = new Perem();
             try
             {
                 pattempt = Convert.ToInt32(File.ReadAllText("Pattemp.txt"));
@@ -30,13 +32,18 @@ namespace Gai
             // string sq = File.ReadAllText("Time.txt");
             if (File.Exists("Time.txt") == false && File.Exists("Pattemp.txt") == false)
             {
-                Perem.keyz = 0;
+                per.SetKey(0);
             }
             else
             {
-                Perem.keyz = 1;
+                per.SetKey(1);
             }
             label_pattempt.Text = "Количество попыток входа : " + pattempt;
+        }
+
+        private void Btn_Login_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

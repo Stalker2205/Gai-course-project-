@@ -112,5 +112,11 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MainClass\MainClass.csproj">
+      <Project>{add91f2d-6dec-4858-979b-77f18842ced9}</Project>
+      <Name>MainClass</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
