@@ -71,7 +71,7 @@ namespace Gai
                     kol = databasegaiDataSet.Сотрудники.Rows.Count;
                     if (kol == 1)
                     {
-                        Perem.key = 1;
+                        Perem.KeyForm = 1;
                         Perem.login = Label_Logins.Text;
                         Perem.password = Label_Password.Text;
                         pattempt = 3;
@@ -80,6 +80,7 @@ namespace Gai
                     }
                     else
                     {
+                        Perem.KeyForm = 0;
                         MessageBox.Show("Такой комбинации логина и пароля не существует");
                         pattempt--;
                         label_pattempt.Text = "Количество попыток входа : " + pattempt; File.WriteAllText("Pattemp.txt", Convert.ToString(pattempt));

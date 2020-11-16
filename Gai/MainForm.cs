@@ -35,7 +35,7 @@ namespace Gai
             this.автоTableAdapter.Fill(this.databasegaiDataSet.Авто);
             LoginForm log = new LoginForm();
             log.ShowDialog();
-            if (Perem.key == 1)
+            if (Perem.KeyForm == 1)
             {//1,2,3,11
                 this.сотрудникиTableAdapter.LoginMainForm(databasegaiDataSet.Сотрудники, Perem.password, Perem.login);
                 Label_FirstName.Text = Convert.ToString(databasegaiDataSet.Сотрудники[0][1]);
@@ -189,11 +189,11 @@ namespace Gai
             if (tabControl_Avto.Visible == true)
             {
                 string ss = Convert.ToString(tabControl_Avto.SelectedTab.Text);
-                MessageBox.Show(ss);
                 switch (ss)
                 {
                     case "Авто":
-
+                        CreatAvto cr = new CreatAvto();
+                        cr.ShowDialog();
                         break;
                     case "ПТС":
 

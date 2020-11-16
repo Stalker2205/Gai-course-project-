@@ -15,5 +15,23 @@ namespace MainLibra
         public static int key;
         public static string login;
         public static string password;
+        public static int KeyForm;
+        public bool year(string year)
+        {
+            try
+            {
+              Convert.ToInt32(year);
+            }
+            catch { MessageBox.Show("год должен быть числом");return false; }
+            if( year.Length != 4)
+            {
+                MessageBox.Show("Год состоит из 4-х цифр");return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
     }
 }

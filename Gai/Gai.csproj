@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreatAvto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreatAvto.Designer.cs">
+      <DependentUpon>CreatAvto.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabasegaiDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -65,6 +71,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreatAvto.resx">
+      <DependentUpon>CreatAvto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,6 +88,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="DatabasegaiDataSet.xsc">
       <DependentUpon>DatabasegaiDataSet.xsd</DependentUpon>
@@ -120,6 +130,9 @@
       <Project>{add91f2d-6dec-4858-979b-77f18842ced9}</Project>
       <Name>MainLibra</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4047284-auto-automobile-automotive-car-shipping-tavel-transport_113533 %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
