@@ -36,13 +36,13 @@
             System.Windows.Forms.Label пТСLabel;
             System.Windows.Forms.Label страховкаLabel;
             System.Windows.Forms.Label cтcLabel;
+            System.Windows.Forms.Label владелецLabel1;
             this.databasegaiDataSet = new Gai.DatabasegaiDataSet();
             this.автоBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.автоTableAdapter = new Gai.DatabasegaiDataSetTableAdapters.АвтоTableAdapter();
             this.tableAdapterManager = new Gai.DatabasegaiDataSetTableAdapters.TableAdapterManager();
             this.vinTextBox = new System.Windows.Forms.TextBox();
             this.modelTextBox = new System.Windows.Forms.TextBox();
-            this.comboBox_Vlad = new System.Windows.Forms.ComboBox();
             this.водителиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox_PTS = new System.Windows.Forms.ComboBox();
             this.пТСBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -57,6 +57,7 @@
             this.страховкаTableAdapter = new Gai.DatabasegaiDataSetTableAdapters.СтраховкаTableAdapter();
             this.стсTableAdapter = new Gai.DatabasegaiDataSetTableAdapters.СтсTableAdapter();
             this.yearTextBox = new System.Windows.Forms.TextBox();
+            this.comboBox_Vlad = new System.Windows.Forms.ComboBox();
             владелецLabel = new System.Windows.Forms.Label();
             vinLabel = new System.Windows.Forms.Label();
             модельLabel = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@
             пТСLabel = new System.Windows.Forms.Label();
             страховкаLabel = new System.Windows.Forms.Label();
             cтcLabel = new System.Windows.Forms.Label();
+            владелецLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.databasegaiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.автоBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.водителиBindingSource)).BeginInit();
@@ -136,6 +138,15 @@
             cтcLabel.TabIndex = 12;
             cтcLabel.Text = "Cтc:";
             // 
+            // владелецLabel1
+            // 
+            владелецLabel1.AutoSize = true;
+            владелецLabel1.Location = new System.Drawing.Point(17, 15);
+            владелецLabel1.Name = "владелецLabel1";
+            владелецLabel1.Size = new System.Drawing.Size(59, 13);
+            владелецLabel1.TabIndex = 19;
+            владелецLabel1.Text = "Владелец:";
+            // 
             // databasegaiDataSet
             // 
             this.databasegaiDataSet.DataSetName = "DatabasegaiDataSet";
@@ -180,17 +191,6 @@
             this.modelTextBox.Name = "modelTextBox";
             this.modelTextBox.Size = new System.Drawing.Size(183, 20);
             this.modelTextBox.TabIndex = 5;
-            // 
-            // comboBox_Vlad
-            // 
-            this.comboBox_Vlad.DataSource = this.водителиBindingSource;
-            this.comboBox_Vlad.DisplayMember = "Фамилия";
-            this.comboBox_Vlad.FormattingEnabled = true;
-            this.comboBox_Vlad.Location = new System.Drawing.Point(82, 12);
-            this.comboBox_Vlad.Name = "comboBox_Vlad";
-            this.comboBox_Vlad.Size = new System.Drawing.Size(183, 21);
-            this.comboBox_Vlad.TabIndex = 13;
-            this.comboBox_Vlad.ValueMember = "ИНВ";
             // 
             // водителиBindingSource
             // 
@@ -288,18 +288,30 @@
             this.yearTextBox.Size = new System.Drawing.Size(183, 20);
             this.yearTextBox.TabIndex = 19;
             // 
+            // comboBox_Vlad
+            // 
+            this.comboBox_Vlad.DataSource = this.водителиBindingSource;
+            this.comboBox_Vlad.DisplayMember = "Фамилия";
+            this.comboBox_Vlad.FormattingEnabled = true;
+            this.comboBox_Vlad.Location = new System.Drawing.Point(82, 11);
+            this.comboBox_Vlad.Name = "comboBox_Vlad";
+            this.comboBox_Vlad.Size = new System.Drawing.Size(183, 21);
+            this.comboBox_Vlad.TabIndex = 20;
+            this.comboBox_Vlad.ValueMember = "ИНВ";
+            // 
             // CreatAvto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 369);
+            this.ClientSize = new System.Drawing.Size(287, 379);
+            this.Controls.Add(this.comboBox_Vlad);
+            this.Controls.Add(владелецLabel1);
             this.Controls.Add(this.yearTextBox);
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comboBox_Sts);
             this.Controls.Add(this.comboBox_STrax);
             this.Controls.Add(this.comboBox_PTS);
-            this.Controls.Add(this.comboBox_Vlad);
             this.Controls.Add(cтcLabel);
             this.Controls.Add(страховкаLabel);
             this.Controls.Add(пТСLabel);
@@ -332,7 +344,6 @@
         private DatabasegaiDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox vinTextBox;
         private System.Windows.Forms.TextBox modelTextBox;
-        private System.Windows.Forms.ComboBox comboBox_Vlad;
         private System.Windows.Forms.ComboBox comboBox_PTS;
         private System.Windows.Forms.ComboBox comboBox_STrax;
         private System.Windows.Forms.ComboBox comboBox_Sts;
@@ -347,5 +358,6 @@
         private System.Windows.Forms.BindingSource стсBindingSource;
         private DatabasegaiDataSetTableAdapters.СтсTableAdapter стсTableAdapter;
         private System.Windows.Forms.TextBox yearTextBox;
+        private System.Windows.Forms.ComboBox comboBox_Vlad;
     }
 }

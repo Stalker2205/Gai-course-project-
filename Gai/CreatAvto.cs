@@ -45,8 +45,16 @@ namespace Gai
             if(per.year(yearTextBox.Text) == false) { return; }
             if(vinTextBox.Text == comboBox_PTS.Text &&vinTextBox.Text== comboBox_Sts.Text && vinTextBox.Text == comboBox_Sts.Text)
             {
-                this.автоTableAdapter.InsertAvto(comboBox_Vlad.SelectedIndex, vinTextBox.Text, modelTextBox.Text,Convert.ToInt32( yearTextBox.Text), comboBox_PTS.SelectedIndex, comboBox_STrax.SelectedIndex, comboBox_Sts.SelectedIndex);
-                Close();
+                this.автоTableAdapter.SerchVin(databasegaiDataSet.Авто, vinTextBox.Text);
+                if (databasegaiDataSet.Авто.Rows.Count != 0)
+                {
+                    MessageBox.Show("Такой вин уже существует"); return;
+                }
+                else
+                {
+                    this.автоTableAdapter.InsertAvto(Convert.ToInt32(comboBox_Vlad.SelectedValue), vinTextBox.Text, modelTextBox.Text, Convert.ToInt32(yearTextBox.Text), Convert.ToInt32(comboBox_PTS.SelectedValue), Convert.ToInt32(comboBox_STrax.SelectedValue), Convert.ToInt32(comboBox_Sts.SelectedValue));
+                    Close();
+                }
             }
             else
             {

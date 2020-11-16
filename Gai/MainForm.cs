@@ -194,6 +194,7 @@ namespace Gai
                     case "Авто":
                         CreatAvto cr = new CreatAvto();
                         cr.ShowDialog();
+                        this.автоTableAdapter.Fill(this.databasegaiDataSet.Авто);
                         break;
                     case "ПТС":
 

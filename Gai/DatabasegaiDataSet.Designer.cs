@@ -46,8 +46,6 @@ namespace Gai {
         
         private global::System.Data.DataRelation relationВодителиАвто;
         
-        private global::System.Data.DataRelation relationПТСАвто;
-        
         private global::System.Data.DataRelation relationСтраховкаАвто;
         
         private global::System.Data.DataRelation relationСтсАвто;
@@ -67,6 +65,8 @@ namespace Gai {
         private global::System.Data.DataRelation relationКатегорииСтс;
         
         private global::System.Data.DataRelation relationПТССтс;
+        
+        private global::System.Data.DataRelation relationПТСАвто;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -435,7 +435,6 @@ namespace Gai {
                 }
             }
             this.relationВодителиАвто = this.Relations["ВодителиАвто"];
-            this.relationПТСАвто = this.Relations["ПТСАвто"];
             this.relationСтраховкаАвто = this.Relations["СтраховкаАвто"];
             this.relationСтсАвто = this.Relations["СтсАвто"];
             this.relationПраваВодители = this.Relations["ПраваВодители"];
@@ -446,6 +445,7 @@ namespace Gai {
             this.relationСотрудникиРапорты = this.Relations["СотрудникиРапорты"];
             this.relationКатегорииСтс = this.Relations["КатегорииСтс"];
             this.relationПТССтс = this.Relations["ПТССтс"];
+            this.relationПТСАвто = this.Relations["ПТСАвто"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -480,10 +480,6 @@ namespace Gai {
                         this.tableВодители.ИНВColumn}, new global::System.Data.DataColumn[] {
                         this.tableАвто.ВладелецColumn}, false);
             this.Relations.Add(this.relationВодителиАвто);
-            this.relationПТСАвто = new global::System.Data.DataRelation("ПТСАвто", new global::System.Data.DataColumn[] {
-                        this.tableПТС.ИНПТСColumn}, new global::System.Data.DataColumn[] {
-                        this.tableАвто.ПТСColumn}, false);
-            this.Relations.Add(this.relationПТСАвто);
             this.relationСтраховкаАвто = new global::System.Data.DataRelation("СтраховкаАвто", new global::System.Data.DataColumn[] {
                         this.tableСтраховка.ИНСтрColumn}, new global::System.Data.DataColumn[] {
                         this.tableАвто.СтраховкаColumn}, false);
@@ -524,6 +520,10 @@ namespace Gai {
                         this.tableПТС.ИНПТСColumn}, new global::System.Data.DataColumn[] {
                         this.tableСтс.ПтсColumn}, false);
             this.Relations.Add(this.relationПТССтс);
+            this.relationПТСАвто = new global::System.Data.DataRelation("ПТСАвто", new global::System.Data.DataColumn[] {
+                        this.tableПТС.ИНПТСColumn}, new global::System.Data.DataColumn[] {
+                        this.tableАвто.ПТСColumn}, false);
+            this.Relations.Add(this.relationПТСАвто);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5324,17 +5324,6 @@ namespace Gai {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ПТСRow ПТСRow {
-                get {
-                    return ((ПТСRow)(this.GetParentRow(this.Table.ParentRelations["ПТСАвто"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["ПТСАвто"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public СтраховкаRow СтраховкаRow {
                 get {
                     return ((СтраховкаRow)(this.GetParentRow(this.Table.ParentRelations["СтраховкаАвто"])));
@@ -5352,6 +5341,17 @@ namespace Gai {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["СтсАвто"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ПТСRow ПТСRow {
+                get {
+                    return ((ПТСRow)(this.GetParentRow(this.Table.ParentRelations["ПТСАвто"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["ПТСАвто"]);
                 }
             }
             
@@ -7697,23 +7697,23 @@ namespace Gai {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public АвтоRow[] GetАвтоRows() {
-                if ((this.Table.ChildRelations["ПТСАвто"] == null)) {
-                    return new АвтоRow[0];
-                }
-                else {
-                    return ((АвтоRow[])(base.GetChildRows(this.Table.ChildRelations["ПТСАвто"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public СтсRow[] GetСтсRows() {
                 if ((this.Table.ChildRelations["ПТССтс"] == null)) {
                     return new СтсRow[0];
                 }
                 else {
                     return ((СтсRow[])(base.GetChildRows(this.Table.ChildRelations["ПТССтс"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public АвтоRow[] GetАвтоRows() {
+                if ((this.Table.ChildRelations["ПТСАвто"] == null)) {
+                    return new АвтоRow[0];
+                }
+                else {
+                    return ((АвтоRow[])(base.GetChildRows(this.Table.ChildRelations["ПТСАвто"])));
                 }
             }
         }
