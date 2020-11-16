@@ -21,7 +21,6 @@ namespace Gai
         int pattempt;
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            Perem per = new Perem();
             try
             {
                 pattempt = Convert.ToInt32(File.ReadAllText("Pattemp.txt"));
@@ -32,19 +31,18 @@ namespace Gai
             // string sq = File.ReadAllText("Time.txt");
             if (File.Exists("Time.txt") == false && File.Exists("Pattemp.txt") == false)
             {
-                per.key = 0;
+                Perem.key = 0;
             }
             else
             {
-                per.key = 1;
+                Perem.key = 1;
             }
             label_pattempt.Text = "Количество попыток входа : " + pattempt;
         }
 
         private void Btn_Login_Click(object sender, EventArgs e)
         {
-            Perem per = new Perem();
-            if (per.key == 0)
+            if (Perem.key == 0)
             {
                 MessageBox.Show("Верните файл на место");
                 Close();
@@ -73,9 +71,9 @@ namespace Gai
                     kol = databasegaiDataSet.Сотрудники.Rows.Count;
                     if (kol == 1)
                     {
-                        per.key = 1;
-                        per.login = Label_Logins.Text;
-                        per.password = Label_Password.Text;
+                        Perem.key = 1;
+                        Perem.login = Label_Logins.Text;
+                        Perem.password = Label_Password.Text;
                         pattempt = 3;
                         File.WriteAllText("Pattemp.txt", Convert.ToString(pattempt));
                         Close();

@@ -12,9 +12,8 @@ namespace MainLibra
 {
     public class Perem
     {
-        public int key { get; set; }
-        public string login { get; set; }
-        public string password { get; set; }
-
+        public static int key;
+        public static string login;
+        public static string password;
     }
 }
