@@ -8,21 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace MainClass
+namespace MainLibra
 {
     public class Perem
     {
-        private int _key;
-        public  int SetKey (int key)
-        {
-            _key = key;
-            return _key;
-        }
+        public int key { get; set; }
+        public string login { get; set; }
+        public string password { get; set; }
 
-        public int GetKey (int key)
-        {
-            return _key;
-        }
-        
     }
 }
