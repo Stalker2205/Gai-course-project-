@@ -52,6 +52,12 @@
     <Compile Include="CreatAvto.Designer.cs">
       <DependentUpon>CreatAvto.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreatPTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreatPTS.Designer.cs">
+      <DependentUpon>CreatPTS.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabasegaiDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -73,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CreatAvto.resx">
       <DependentUpon>CreatAvto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreatPTS.resx">
+      <DependentUpon>CreatPTS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
