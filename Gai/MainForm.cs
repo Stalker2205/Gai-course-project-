@@ -197,7 +197,9 @@ namespace Gai
                         this.автоTableAdapter.Fill(this.databasegaiDataSet.Авто);
                         break;
                     case "ПТС":
-
+                        CreatPTS cp = new CreatPTS();
+                        cp.ShowDialog();
+                        this.пТСTableAdapter.Fill(this.databasegaiDataSet.ПТС);
                         break;
                     case "СТС":
 

@@ -41,8 +41,6 @@
             this.автоBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.автоTableAdapter = new Gai.DatabasegaiDataSetTableAdapters.АвтоTableAdapter();
             this.tableAdapterManager = new Gai.DatabasegaiDataSetTableAdapters.TableAdapterManager();
-            this.vinTextBox = new System.Windows.Forms.TextBox();
-            this.modelTextBox = new System.Windows.Forms.TextBox();
             this.водителиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox_PTS = new System.Windows.Forms.ComboBox();
             this.пТСBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -58,6 +56,8 @@
             this.стсTableAdapter = new Gai.DatabasegaiDataSetTableAdapters.СтсTableAdapter();
             this.yearTextBox = new System.Windows.Forms.TextBox();
             this.comboBox_Vlad = new System.Windows.Forms.ComboBox();
+            this.vinTextBox = new System.Windows.Forms.TextBox();
+            this.modelTextBox = new System.Windows.Forms.TextBox();
             владелецLabel = new System.Windows.Forms.Label();
             vinLabel = new System.Windows.Forms.Label();
             модельLabel = new System.Windows.Forms.Label();
@@ -176,22 +176,6 @@
             this.tableAdapterManager.СтраховкаTableAdapter = null;
             this.tableAdapterManager.СтсTableAdapter = null;
             // 
-            // vinTextBox
-            // 
-            this.vinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автоBindingSource, "Vin", true));
-            this.vinTextBox.Location = new System.Drawing.Point(82, 38);
-            this.vinTextBox.Name = "vinTextBox";
-            this.vinTextBox.Size = new System.Drawing.Size(183, 20);
-            this.vinTextBox.TabIndex = 3;
-            // 
-            // modelTextBox
-            // 
-            this.modelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автоBindingSource, "Модель", true));
-            this.modelTextBox.Location = new System.Drawing.Point(82, 64);
-            this.modelTextBox.Name = "modelTextBox";
-            this.modelTextBox.Size = new System.Drawing.Size(183, 20);
-            this.modelTextBox.TabIndex = 5;
-            // 
             // водителиBindingSource
             // 
             this.водителиBindingSource.DataMember = "Водители";
@@ -299,11 +283,27 @@
             this.comboBox_Vlad.TabIndex = 20;
             this.comboBox_Vlad.ValueMember = "ИНВ";
             // 
+            // vinTextBox
+            // 
+            this.vinTextBox.Location = new System.Drawing.Point(82, 38);
+            this.vinTextBox.Name = "vinTextBox";
+            this.vinTextBox.Size = new System.Drawing.Size(183, 20);
+            this.vinTextBox.TabIndex = 21;
+            // 
+            // modelTextBox
+            // 
+            this.modelTextBox.Location = new System.Drawing.Point(82, 64);
+            this.modelTextBox.Name = "modelTextBox";
+            this.modelTextBox.Size = new System.Drawing.Size(183, 20);
+            this.modelTextBox.TabIndex = 22;
+            // 
             // CreatAvto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(287, 379);
+            this.Controls.Add(this.modelTextBox);
+            this.Controls.Add(this.vinTextBox);
             this.Controls.Add(this.comboBox_Vlad);
             this.Controls.Add(владелецLabel1);
             this.Controls.Add(this.yearTextBox);
@@ -317,9 +317,7 @@
             this.Controls.Add(пТСLabel);
             this.Controls.Add(годLabel);
             this.Controls.Add(модельLabel);
-            this.Controls.Add(this.modelTextBox);
             this.Controls.Add(vinLabel);
-            this.Controls.Add(this.vinTextBox);
             this.Controls.Add(владелецLabel);
             this.Name = "CreatAvto";
             this.Text = "CreatAvto";
@@ -342,8 +340,6 @@
         private System.Windows.Forms.BindingSource автоBindingSource;
         private DatabasegaiDataSetTableAdapters.АвтоTableAdapter автоTableAdapter;
         private DatabasegaiDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox vinTextBox;
-        private System.Windows.Forms.TextBox modelTextBox;
         private System.Windows.Forms.ComboBox comboBox_PTS;
         private System.Windows.Forms.ComboBox comboBox_STrax;
         private System.Windows.Forms.ComboBox comboBox_Sts;
@@ -359,5 +355,7 @@
         private DatabasegaiDataSetTableAdapters.СтсTableAdapter стсTableAdapter;
         private System.Windows.Forms.TextBox yearTextBox;
         private System.Windows.Forms.ComboBox comboBox_Vlad;
+        private System.Windows.Forms.TextBox vinTextBox;
+        private System.Windows.Forms.TextBox modelTextBox;
     }
 }

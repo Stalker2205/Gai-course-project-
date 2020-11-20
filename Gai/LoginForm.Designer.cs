@@ -119,6 +119,7 @@
             // 
             this.Label_Password.Location = new System.Drawing.Point(87, 302);
             this.Label_Password.Name = "Label_Password";
+            this.Label_Password.PasswordChar = '*';
             this.Label_Password.Size = new System.Drawing.Size(128, 20);
             this.Label_Password.TabIndex = 9;
             // 

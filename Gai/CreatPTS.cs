@@ -17,16 +17,13 @@ namespace Gai
             InitializeComponent();
         }
 
-        private void пТСBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.пТСBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.databasegaiDataSet);
-
-        }
 
         private void CreatPTS_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "databasegaiDataSet.Категории". При необходимости она может быть перемещена или удалена.
+            this.категорииTableAdapter.Fill(this.databasegaiDataSet.Категории);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "databasegaiDataSet.Водители". При необходимости она может быть перемещена или удалена.
+            this.водителиTableAdapter.Fill(this.databasegaiDataSet.Водители);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "databasegaiDataSet.ПТС". При необходимости она может быть перемещена или удалена.
             this.пТСTableAdapter.Fill(this.databasegaiDataSet.ПТС);
 

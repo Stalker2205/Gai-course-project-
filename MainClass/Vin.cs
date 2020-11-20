@@ -10,18 +10,9 @@ namespace MainLibra
     public class Vin
     {
         private string _vin;
-        public bool CheckVin(string vin)
+        public bool CheckVin (string strok)
         {
-            if( vin.Length == 17 )
-            {
-                _vin = vin;
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("Вин должен быть длинной 17 символов");
-                return false;
-            }
+            return strok.Length == 17 ;
         }
     }
 }

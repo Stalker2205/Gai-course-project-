@@ -39,7 +39,10 @@ namespace Gai
             Vin vn = new Vin();
             Perem per = new Perem();
             if(vinTextBox.TextLength == 0) { MessageBox.Show("Введите вин");return; }
-            vn.CheckVin(vinTextBox.Text);
+            if(!vn.CheckVin(vinTextBox.Text))
+            {
+                MessageBox.Show("Длина vin 17 симоволов");return;
+            }
             if(modelTextBox.TextLength == 0) { MessageBox.Show("Введите модель");return; }
             if(yearTextBox.TextLength == 0) { MessageBox.Show("Введите год");return; }
             if(per.year(yearTextBox.Text) == false) { return; }

@@ -9710,7 +9710,7 @@ namespace Gai.DatabasegaiDataSetTableAdapters {
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Страховка", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Страховка", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        ИНА, Владелец, Vin, Модель, Год, ПТС, Страховка, Cnc\r\nFROM         " +
+            this._commandCollection[3].CommandText = "SELECT        ИНА, Владелец, Vin, Модель, Год, ПТС, Страховка, Cтc\r\nFROM         " +
                 "   Авто\r\nWHERE        (Vin = ?)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Vin", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Vin", global::System.Data.DataRowVersion.Current, false, null));
