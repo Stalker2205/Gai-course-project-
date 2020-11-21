@@ -61,41 +61,42 @@
             this.tableAdapterManager = new Gai.DatabasegaiDataSetTableAdapters.TableAdapterManager();
             this.tabControl_PTS = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.серияПТСTextBox1 = new System.Windows.Forms.TextBox();
+            this.номерПтсTextBox1 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.водителиBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.одобрениеТипаТСTextBox = new System.Windows.Forms.TextBox();
+            this.таможенныеОграниченияTextBox = new System.Windows.Forms.TextBox();
             this.собственникTextBox = new System.Windows.Forms.TextBox();
             this.особыеОтметкиTextBox = new System.Windows.Forms.TextBox();
-            this.серияПТСTextBox1 = new System.Windows.Forms.TextBox();
             this.адремTextBox = new System.Windows.Forms.TextBox();
-            this.номерПтсTextBox1 = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.шассиTextBox = new System.Windows.Forms.TextBox();
+            this.массаБезНагрузкиTextBox = new System.Windows.Forms.TextBox();
+            this.кузовTextBox = new System.Windows.Forms.TextBox();
+            this.максимальнаяМассаTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.категорииBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vinTextBox = new System.Windows.Forms.TextBox();
+            this.годИзготовленияTextBox = new System.Windows.Forms.TextBox();
+            this.изготовительTextBox = new System.Windows.Forms.TextBox();
             this.маркаTextBox = new System.Windows.Forms.TextBox();
             this.наименованиеTextBox = new System.Windows.Forms.TextBox();
+            this.цветTextBox = new System.Windows.Forms.TextBox();
+            this.номерTextBox = new System.Windows.Forms.TextBox();
+            this.серияTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.модель_НомерДвигателяTextBox = new System.Windows.Forms.TextBox();
             this.мощьностьДвигателяTextBox1 = new System.Windows.Forms.TextBox();
             this.объемДвигателяTextBox1 = new System.Windows.Forms.TextBox();
             this.типДвигателяTextBox = new System.Windows.Forms.TextBox();
-            this.серияTextBox = new System.Windows.Forms.TextBox();
-            this.номерTextBox = new System.Windows.Forms.TextBox();
-            this.годИзготовленияTextBox = new System.Windows.Forms.TextBox();
-            this.шассиTextBox = new System.Windows.Forms.TextBox();
-            this.кузовTextBox = new System.Windows.Forms.TextBox();
-            this.цветTextBox = new System.Windows.Forms.TextBox();
-            this.максимальнаяМассаTextBox = new System.Windows.Forms.TextBox();
-            this.массаБезНагрузкиTextBox = new System.Windows.Forms.TextBox();
-            this.изготовительTextBox = new System.Windows.Forms.TextBox();
-            this.одобрениеТипаТСTextBox = new System.Windows.Forms.TextBox();
-            this.таможенныеОграниченияTextBox = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.водителиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.водителиTableAdapter = new Gai.DatabasegaiDataSetTableAdapters.ВодителиTableAdapter();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.категорииBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.категорииTableAdapter = new Gai.DatabasegaiDataSetTableAdapters.КатегорииTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
             vinLabel = new System.Windows.Forms.Label();
             номерПтсLabel1 = new System.Windows.Forms.Label();
             серияПТСLabel1 = new System.Windows.Forms.Label();
@@ -126,12 +127,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.пТСBindingSource)).BeginInit();
             this.tabControl_PTS.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.водителиBindingSource)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.категорииBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // vinLabel
@@ -175,9 +176,9 @@
             наименованиеLabel.AutoSize = true;
             наименованиеLabel.Location = new System.Drawing.Point(7, 48);
             наименованиеLabel.Name = "наименованиеLabel";
-            наименованиеLabel.Size = new System.Drawing.Size(86, 13);
+            наименованиеLabel.Size = new System.Drawing.Size(132, 13);
             наименованиеLabel.TabIndex = 9;
-            наименованиеLabel.Text = "Наименование:";
+            наименованиеLabel.Text = "Наименование (тип ТС) :";
             // 
             // серияLabel
             // 
@@ -254,11 +255,11 @@
             // мощьностьДвигателяLabel1
             // 
             мощьностьДвигателяLabel1.AutoSize = true;
-            мощьностьДвигателяLabel1.Location = new System.Drawing.Point(21, 52);
+            мощьностьДвигателяLabel1.Location = new System.Drawing.Point(0, 52);
             мощьностьДвигателяLabel1.Name = "мощьностьДвигателяLabel1";
-            мощьностьДвигателяLabel1.Size = new System.Drawing.Size(72, 13);
+            мощьностьДвигателяLabel1.Size = new System.Drawing.Size(99, 13);
             мощьностьДвигателяLabel1.TabIndex = 27;
-            мощьностьДвигателяLabel1.Text = "Мощьность :";
+            мощьностьДвигателяLabel1.Text = "Мощьность в ЛС :";
             // 
             // объемДвигателяLabel1
             // 
@@ -409,6 +410,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.серияПТСTextBox1);
+            this.tabPage3.Controls.Add(this.номерПтсTextBox1);
             this.tabPage3.Controls.Add(this.dateTimePicker1);
             this.tabPage3.Controls.Add(this.comboBox1);
             this.tabPage3.Controls.Add(одобрениеТипаТСLabel);
@@ -420,11 +423,9 @@
             this.tabPage3.Controls.Add(this.собственникTextBox);
             this.tabPage3.Controls.Add(собственникТСLabel);
             this.tabPage3.Controls.Add(this.особыеОтметкиTextBox);
-            this.tabPage3.Controls.Add(this.серияПТСTextBox1);
             this.tabPage3.Controls.Add(адремLabel);
             this.tabPage3.Controls.Add(датаВыдачиПаспортаLabel);
             this.tabPage3.Controls.Add(this.адремTextBox);
-            this.tabPage3.Controls.Add(this.номерПтсTextBox1);
             this.tabPage3.Controls.Add(номерПтсLabel1);
             this.tabPage3.Controls.Add(серияПТСLabel1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -433,6 +434,61 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Документы";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // серияПТСTextBox1
+            // 
+            this.серияПТСTextBox1.Location = new System.Drawing.Point(333, 6);
+            this.серияПТСTextBox1.Name = "серияПТСTextBox1";
+            this.серияПТСTextBox1.Size = new System.Drawing.Size(146, 20);
+            this.серияПТСTextBox1.TabIndex = 55;
+            // 
+            // номерПтсTextBox1
+            // 
+            this.номерПтсTextBox1.Location = new System.Drawing.Point(102, 6);
+            this.номерПтсTextBox1.Name = "номерПтсTextBox1";
+            this.номерПтсTextBox1.Size = new System.Drawing.Size(143, 20);
+            this.номерПтсTextBox1.TabIndex = 54;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(135, 64);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(92, 20);
+            this.dateTimePicker1.TabIndex = 53;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.водителиBindingSource;
+            this.comboBox1.DisplayMember = "Фамилия";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(102, 37);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(143, 21);
+            this.comboBox1.TabIndex = 52;
+            this.comboBox1.ValueMember = "ИНВ";
+            // 
+            // водителиBindingSource
+            // 
+            this.водителиBindingSource.DataMember = "Водители";
+            this.водителиBindingSource.DataSource = this.databasegaiDataSet;
+            // 
+            // одобрениеТипаТСTextBox
+            // 
+            this.одобрениеТипаТСTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "ОдобрениеТипаТС", true));
+            this.одобрениеТипаТСTextBox.Location = new System.Drawing.Point(127, 309);
+            this.одобрениеТипаТСTextBox.Name = "одобрениеТипаТСTextBox";
+            this.одобрениеТипаТСTextBox.Size = new System.Drawing.Size(352, 20);
+            this.одобрениеТипаТСTextBox.TabIndex = 40;
+            // 
+            // таможенныеОграниченияTextBox
+            // 
+            this.таможенныеОграниченияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "ТаможенныеОграничения", true));
+            this.таможенныеОграниченияTextBox.Location = new System.Drawing.Point(241, 125);
+            this.таможенныеОграниченияTextBox.Multiline = true;
+            this.таможенныеОграниченияTextBox.Name = "таможенныеОграниченияTextBox";
+            this.таможенныеОграниченияTextBox.Size = new System.Drawing.Size(238, 178);
+            this.таможенныеОграниченияTextBox.TabIndex = 42;
             // 
             // собственникTextBox
             // 
@@ -451,14 +507,6 @@
             this.особыеОтметкиTextBox.Size = new System.Drawing.Size(229, 178);
             this.особыеОтметкиTextBox.TabIndex = 50;
             // 
-            // серияПТСTextBox1
-            // 
-            this.серияПТСTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "СерияПТС", true));
-            this.серияПТСTextBox1.Location = new System.Drawing.Point(323, 6);
-            this.серияПТСTextBox1.Name = "серияПТСTextBox1";
-            this.серияПТСTextBox1.Size = new System.Drawing.Size(156, 20);
-            this.серияПТСTextBox1.TabIndex = 6;
-            // 
             // адремTextBox
             // 
             this.адремTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "Адрем", true));
@@ -466,14 +514,6 @@
             this.адремTextBox.Name = "адремTextBox";
             this.адремTextBox.Size = new System.Drawing.Size(199, 20);
             this.адремTextBox.TabIndex = 46;
-            // 
-            // номерПтсTextBox1
-            // 
-            this.номерПтсTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "НомерПтс", true));
-            this.номерПтсTextBox1.Location = new System.Drawing.Point(102, 6);
-            this.номерПтсTextBox1.Name = "номерПтсTextBox1";
-            this.номерПтсTextBox1.Size = new System.Drawing.Size(143, 20);
-            this.номерПтсTextBox1.TabIndex = 4;
             // 
             // tabPage1
             // 
@@ -487,6 +527,55 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Авто";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(массаБезНагрузкиLabel);
+            this.groupBox3.Controls.Add(this.шассиTextBox);
+            this.groupBox3.Controls.Add(this.массаБезНагрузкиTextBox);
+            this.groupBox3.Controls.Add(шассиLabel);
+            this.groupBox3.Controls.Add(максимальнаяМассаLabel);
+            this.groupBox3.Controls.Add(this.кузовTextBox);
+            this.groupBox3.Controls.Add(this.максимальнаяМассаTextBox);
+            this.groupBox3.Controls.Add(кузовLabel);
+            this.groupBox3.Location = new System.Drawing.Point(226, 190);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(242, 132);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Дополнительная информация";
+            // 
+            // шассиTextBox
+            // 
+            this.шассиTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "Шасси", true));
+            this.шассиTextBox.Location = new System.Drawing.Point(55, 24);
+            this.шассиTextBox.Name = "шассиTextBox";
+            this.шассиTextBox.Size = new System.Drawing.Size(177, 20);
+            this.шассиTextBox.TabIndex = 22;
+            // 
+            // массаБезНагрузкиTextBox
+            // 
+            this.массаБезНагрузкиTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "МассаБезНагрузки", true));
+            this.массаБезНагрузкиTextBox.Location = new System.Drawing.Point(132, 102);
+            this.массаБезНагрузкиTextBox.Name = "массаБезНагрузкиTextBox";
+            this.массаБезНагрузкиTextBox.Size = new System.Drawing.Size(100, 20);
+            this.массаБезНагрузкиTextBox.TabIndex = 36;
+            // 
+            // кузовTextBox
+            // 
+            this.кузовTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "Кузов", true));
+            this.кузовTextBox.Location = new System.Drawing.Point(55, 50);
+            this.кузовTextBox.Name = "кузовTextBox";
+            this.кузовTextBox.Size = new System.Drawing.Size(177, 20);
+            this.кузовTextBox.TabIndex = 24;
+            // 
+            // максимальнаяМассаTextBox
+            // 
+            this.максимальнаяМассаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "МаксимальнаяМасса", true));
+            this.максимальнаяМассаTextBox.Location = new System.Drawing.Point(132, 76);
+            this.максимальнаяМассаTextBox.Name = "максимальнаяМассаTextBox";
+            this.максимальнаяМассаTextBox.Size = new System.Drawing.Size(100, 20);
+            this.максимальнаяМассаTextBox.TabIndex = 34;
             // 
             // groupBox2
             // 
@@ -515,6 +604,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Основная информация об авто";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.DataSource = this.категорииBindingSource;
+            this.comboBox2.DisplayMember = "Категория";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(99, 72);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(189, 21);
+            this.comboBox2.TabIndex = 39;
+            this.comboBox2.ValueMember = "Категория";
+            // 
+            // категорииBindingSource
+            // 
+            this.категорииBindingSource.DataMember = "Категории";
+            this.категорииBindingSource.DataSource = this.databasegaiDataSet;
+            // 
             // vinTextBox
             // 
             this.vinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "Vin", true));
@@ -522,6 +627,22 @@
             this.vinTextBox.Name = "vinTextBox";
             this.vinTextBox.Size = new System.Drawing.Size(187, 20);
             this.vinTextBox.TabIndex = 2;
+            // 
+            // годИзготовленияTextBox
+            // 
+            this.годИзготовленияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "ГодИзготовления", true));
+            this.годИзготовленияTextBox.Location = new System.Drawing.Point(114, 150);
+            this.годИзготовленияTextBox.Name = "годИзготовленияTextBox";
+            this.годИзготовленияTextBox.Size = new System.Drawing.Size(85, 20);
+            this.годИзготовленияTextBox.TabIndex = 18;
+            // 
+            // изготовительTextBox
+            // 
+            this.изготовительTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "Изготовитель", true));
+            this.изготовительTextBox.Location = new System.Drawing.Point(99, 98);
+            this.изготовительTextBox.Name = "изготовительTextBox";
+            this.изготовительTextBox.Size = new System.Drawing.Size(353, 20);
+            this.изготовительTextBox.TabIndex = 38;
             // 
             // маркаTextBox
             // 
@@ -534,10 +655,34 @@
             // наименованиеTextBox
             // 
             this.наименованиеTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "Наименование", true));
-            this.наименованиеTextBox.Location = new System.Drawing.Point(99, 45);
+            this.наименованиеTextBox.Location = new System.Drawing.Point(145, 45);
             this.наименованиеTextBox.Name = "наименованиеTextBox";
-            this.наименованиеTextBox.Size = new System.Drawing.Size(353, 20);
+            this.наименованиеTextBox.Size = new System.Drawing.Size(307, 20);
             this.наименованиеTextBox.TabIndex = 10;
+            // 
+            // цветTextBox
+            // 
+            this.цветTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "Цвет", true));
+            this.цветTextBox.Location = new System.Drawing.Point(335, 71);
+            this.цветTextBox.Name = "цветTextBox";
+            this.цветTextBox.Size = new System.Drawing.Size(117, 20);
+            this.цветTextBox.TabIndex = 26;
+            // 
+            // номерTextBox
+            // 
+            this.номерTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "Номер", true));
+            this.номерTextBox.Location = new System.Drawing.Point(335, 124);
+            this.номерTextBox.Name = "номерTextBox";
+            this.номерTextBox.Size = new System.Drawing.Size(117, 20);
+            this.номерTextBox.TabIndex = 16;
+            // 
+            // серияTextBox
+            // 
+            this.серияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "Серия", true));
+            this.серияTextBox.Location = new System.Drawing.Point(99, 124);
+            this.серияTextBox.Name = "серияTextBox";
+            this.серияTextBox.Size = new System.Drawing.Size(161, 20);
+            this.серияTextBox.TabIndex = 12;
             // 
             // groupBox1
             // 
@@ -588,175 +733,42 @@
             this.типДвигателяTextBox.Size = new System.Drawing.Size(100, 20);
             this.типДвигателяTextBox.TabIndex = 32;
             // 
-            // серияTextBox
-            // 
-            this.серияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "Серия", true));
-            this.серияTextBox.Location = new System.Drawing.Point(99, 124);
-            this.серияTextBox.Name = "серияTextBox";
-            this.серияTextBox.Size = new System.Drawing.Size(161, 20);
-            this.серияTextBox.TabIndex = 12;
-            // 
-            // номерTextBox
-            // 
-            this.номерTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "Номер", true));
-            this.номерTextBox.Location = new System.Drawing.Point(335, 124);
-            this.номерTextBox.Name = "номерTextBox";
-            this.номерTextBox.Size = new System.Drawing.Size(117, 20);
-            this.номерTextBox.TabIndex = 16;
-            // 
-            // годИзготовленияTextBox
-            // 
-            this.годИзготовленияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "ГодИзготовления", true));
-            this.годИзготовленияTextBox.Location = new System.Drawing.Point(114, 150);
-            this.годИзготовленияTextBox.Name = "годИзготовленияTextBox";
-            this.годИзготовленияTextBox.Size = new System.Drawing.Size(85, 20);
-            this.годИзготовленияTextBox.TabIndex = 18;
-            // 
-            // шассиTextBox
-            // 
-            this.шассиTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "Шасси", true));
-            this.шассиTextBox.Location = new System.Drawing.Point(55, 24);
-            this.шассиTextBox.Name = "шассиTextBox";
-            this.шассиTextBox.Size = new System.Drawing.Size(177, 20);
-            this.шассиTextBox.TabIndex = 22;
-            // 
-            // кузовTextBox
-            // 
-            this.кузовTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "Кузов", true));
-            this.кузовTextBox.Location = new System.Drawing.Point(55, 50);
-            this.кузовTextBox.Name = "кузовTextBox";
-            this.кузовTextBox.Size = new System.Drawing.Size(177, 20);
-            this.кузовTextBox.TabIndex = 24;
-            // 
-            // цветTextBox
-            // 
-            this.цветTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "Цвет", true));
-            this.цветTextBox.Location = new System.Drawing.Point(335, 71);
-            this.цветTextBox.Name = "цветTextBox";
-            this.цветTextBox.Size = new System.Drawing.Size(117, 20);
-            this.цветTextBox.TabIndex = 26;
-            // 
-            // максимальнаяМассаTextBox
-            // 
-            this.максимальнаяМассаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "МаксимальнаяМасса", true));
-            this.максимальнаяМассаTextBox.Location = new System.Drawing.Point(132, 76);
-            this.максимальнаяМассаTextBox.Name = "максимальнаяМассаTextBox";
-            this.максимальнаяМассаTextBox.Size = new System.Drawing.Size(100, 20);
-            this.максимальнаяМассаTextBox.TabIndex = 34;
-            // 
-            // массаБезНагрузкиTextBox
-            // 
-            this.массаБезНагрузкиTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "МассаБезНагрузки", true));
-            this.массаБезНагрузкиTextBox.Location = new System.Drawing.Point(132, 102);
-            this.массаБезНагрузкиTextBox.Name = "массаБезНагрузкиTextBox";
-            this.массаБезНагрузкиTextBox.Size = new System.Drawing.Size(100, 20);
-            this.массаБезНагрузкиTextBox.TabIndex = 36;
-            // 
-            // изготовительTextBox
-            // 
-            this.изготовительTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "Изготовитель", true));
-            this.изготовительTextBox.Location = new System.Drawing.Point(99, 98);
-            this.изготовительTextBox.Name = "изготовительTextBox";
-            this.изготовительTextBox.Size = new System.Drawing.Size(353, 20);
-            this.изготовительTextBox.TabIndex = 38;
-            // 
-            // одобрениеТипаТСTextBox
-            // 
-            this.одобрениеТипаТСTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "ОдобрениеТипаТС", true));
-            this.одобрениеТипаТСTextBox.Location = new System.Drawing.Point(127, 309);
-            this.одобрениеТипаТСTextBox.Name = "одобрениеТипаТСTextBox";
-            this.одобрениеТипаТСTextBox.Size = new System.Drawing.Size(352, 20);
-            this.одобрениеТипаТСTextBox.TabIndex = 40;
-            // 
-            // таможенныеОграниченияTextBox
-            // 
-            this.таможенныеОграниченияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пТСBindingSource, "ТаможенныеОграничения", true));
-            this.таможенныеОграниченияTextBox.Location = new System.Drawing.Point(241, 125);
-            this.таможенныеОграниченияTextBox.Multiline = true;
-            this.таможенныеОграниченияTextBox.Name = "таможенныеОграниченияTextBox";
-            this.таможенныеОграниченияTextBox.Size = new System.Drawing.Size(238, 178);
-            this.таможенныеОграниченияTextBox.TabIndex = 42;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(массаБезНагрузкиLabel);
-            this.groupBox3.Controls.Add(this.шассиTextBox);
-            this.groupBox3.Controls.Add(this.массаБезНагрузкиTextBox);
-            this.groupBox3.Controls.Add(шассиLabel);
-            this.groupBox3.Controls.Add(максимальнаяМассаLabel);
-            this.groupBox3.Controls.Add(this.кузовTextBox);
-            this.groupBox3.Controls.Add(this.максимальнаяМассаTextBox);
-            this.groupBox3.Controls.Add(кузовLabel);
-            this.groupBox3.Location = new System.Drawing.Point(226, 190);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(242, 132);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Дополнительная информация";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.водителиBindingSource;
-            this.comboBox1.DisplayMember = "Фамилия";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(102, 37);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(143, 21);
-            this.comboBox1.TabIndex = 52;
-            this.comboBox1.ValueMember = "ИНВ";
-            // 
-            // водителиBindingSource
-            // 
-            this.водителиBindingSource.DataMember = "Водители";
-            this.водителиBindingSource.DataSource = this.databasegaiDataSet;
-            // 
             // водителиTableAdapter
             // 
             this.водителиTableAdapter.ClearBeforeFill = true;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(135, 64);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(92, 20);
-            this.dateTimePicker1.TabIndex = 53;
-            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(151, 376);
+            this.button1.Location = new System.Drawing.Point(12, 376);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(201, 62);
             this.button1.TabIndex = 1;
             this.button1.Text = "Сохранить";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DataSource = this.категорииBindingSource;
-            this.comboBox2.DisplayMember = "Категория";
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(99, 72);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(189, 21);
-            this.comboBox2.TabIndex = 39;
-            this.comboBox2.ValueMember = "Категория";
-            // 
-            // категорииBindingSource
-            // 
-            this.категорииBindingSource.DataMember = "Категории";
-            this.категорииBindingSource.DataSource = this.databasegaiDataSet;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // категорииTableAdapter
             // 
             this.категорииTableAdapter.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(303, 376);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(201, 62);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Очистить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // CreatPTS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(518, 443);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl_PTS);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -768,15 +780,15 @@
             this.tabControl_PTS.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.водителиBindingSource)).EndInit();
             this.tabPage1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.водителиBindingSource)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.категорииBindingSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -793,9 +805,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox собственникTextBox;
         private System.Windows.Forms.TextBox особыеОтметкиTextBox;
-        private System.Windows.Forms.TextBox серияПТСTextBox1;
         private System.Windows.Forms.TextBox адремTextBox;
-        private System.Windows.Forms.TextBox номерПтсTextBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox vinTextBox;
         private System.Windows.Forms.TextBox маркаTextBox;
@@ -819,10 +829,13 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource водителиBindingSource;
         private DatabasegaiDataSetTableAdapters.ВодителиTableAdapter водителиTableAdapter;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.BindingSource категорииBindingSource;
         private DatabasegaiDataSetTableAdapters.КатегорииTableAdapter категорииTableAdapter;
+        private System.Windows.Forms.TextBox серияПТСTextBox1;
+        private System.Windows.Forms.TextBox номерПтсTextBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button2;
     }
 }

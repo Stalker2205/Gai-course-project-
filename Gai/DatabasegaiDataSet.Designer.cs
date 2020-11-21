@@ -12898,7 +12898,7 @@ WHERE        (ИНП = ?)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        Vin, НомерПтс, СерияПТС, Марка, Наименование, Серия, Категория, Номер, ГодИзготовления, [Модель,НомерДвигателя], Шасси, Кузов, Цвет, МощьностьДвигателя, ОбъемДвигателя, ТипДвигателя, 
+            this._commandCollection[1].CommandText = @"SELECT        ИНПТС, Vin, НомерПтс, СерияПТС, Марка, Наименование, Серия, Категория, Номер, ГодИзготовления, [Модель,НомерДвигателя], Шасси, Кузов, Цвет, МощьностьДвигателя, ОбъемДвигателя, ТипДвигателя, 
                          МаксимальнаяМасса, МассаБезНагрузки, Изготовитель, ОдобрениеТипаТС, ТаможенныеОграничения, Собственник, Адрем, ДатаВыдачиПаспорта, ОсобыеОтметки, СобственникТС
 FROM            ПТС
 WHERE        (НомерПтс = ?) AND (СерияПТС = ?)";
@@ -12907,7 +12907,7 @@ WHERE        (НомерПтс = ?) AND (СерияПТС = ?)";
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("СерияПТС", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "СерияПТС", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"SELECT        Vin, НомерПтс, СерияПТС, Марка, Наименование, Серия, Категория, Номер, ГодИзготовления, [Модель,НомерДвигателя], Шасси, Кузов, Цвет, МощьностьДвигателя, ОбъемДвигателя, ТипДвигателя, 
+            this._commandCollection[2].CommandText = @"SELECT        ИНПТС, Vin, НомерПтс, СерияПТС, Марка, Наименование, Серия, Категория, Номер, ГодИзготовления, [Модель,НомерДвигателя], Шасси, Кузов, Цвет, МощьностьДвигателя, ОбъемДвигателя, ТипДвигателя, 
                          МаксимальнаяМасса, МассаБезНагрузки, Изготовитель, ОдобрениеТипаТС, ТаможенныеОграничения, Собственник, Адрем, ДатаВыдачиПаспорта, ОсобыеОтметки, СобственникТС
 FROM            ПТС
 WHERE        (Vin = ?)";
