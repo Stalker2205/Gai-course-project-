@@ -93,6 +93,7 @@
             this.Btn_Login.TabIndex = 12;
             this.Btn_Login.Text = "Вход";
             this.Btn_Login.UseVisualStyleBackColor = true;
+            this.Btn_Login.Click += new System.EventHandler(this.Btn_Login_Click);
             // 
             // label1
             // 
@@ -118,6 +119,7 @@
             // 
             this.Label_Password.Location = new System.Drawing.Point(87, 302);
             this.Label_Password.Name = "Label_Password";
+            this.Label_Password.PasswordChar = '*';
             this.Label_Password.Size = new System.Drawing.Size(128, 20);
             this.Label_Password.TabIndex = 9;
             // 
